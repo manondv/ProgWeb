@@ -1,0 +1,40 @@
+<html>
+
+	<script type="text/javascript">
+		
+		var nb = 3;
+		var intervalID;	
+		
+		
+		function decrease(){
+			document.writeln(nb);
+			nb = nb-1;
+			if (nb<0){
+				stop();
+			}
+		}
+		
+		function stop(){
+			window.clearInterval(intervalID);
+		}
+		
+		function compte_a_rebours(){
+			intervalID = window.setInterval(decrease,1000);
+			
+		}
+		
+		function affiche(texte){
+			document.writeln(texte);
+		}
+		
+	</script>
+	
+	<head>
+		<title> TP1 </title>
+	</head>
+	
+	<body>
+		<h1 id="titre"> Compte à rebours </h1>
+		<script> compte_a_rebours(); </script>
+	</body>
+</html>
